@@ -1,0 +1,25 @@
+.input-title{
+    display: none;  /*^^^*/
+    width: 100%;  /*^^^*/
+    background-color: #e4dedef3;
+    font-size: 0.6em;
+    border: 1px solid grey;
+    padding: 0.2em;
+    border-radius: 0.3em;
+    margin: 0 0 0.5em 0;
+}
+
+.input-error{
+    display: block;
+    width: 100%;  /*^^^*/
+    background-color: #ec9d9df3;
+    font-size: 0.6em;
+    border: 1px solid rgb(204, 92, 92);
+    padding: 0.2em;
+    border-radius: 0.3em;
+    margin: 0 0 0.5em 0;
+}
+
+.input-error:empty{
+    display: none;
+}

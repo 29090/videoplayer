@@ -1,0 +1,78 @@
+
+/* медленное появление модального окна */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s; /* Добавляем анимацию для медленного появления */
+  }
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0px; /* "0" отступы от края в модальном окне */
+    width: 640px; /* Замените на фиксированную ширину, которая будет использоваться по умолчанию */
+    min-height: 360px; /* Замените на фиксированную высоту, которая будет использоваться по умолчанию */
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.3s; /* Добавляем анимацию для медленного появления */
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #050000f6;
+  }
+
+  .content{
+    padding: 1em;
+    height: 80%;
+  }
+
+  .content h2{
+    margin-top: 0;
+  }
+
+
+.genere_level_content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.1fr;
+  height: 100%;
+  font-size: 1.5em;
+  }
+
+.genere_level_content .item1{
+  grid-row-start: 1;
+  grid-row-end: 3;
+  }
+
+.genere_level_content .item2{
+  grid-row-start: 1;
+  grid-row-end: 2;
+  }
+
+.genere_level_content .item3{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: right;
+  }

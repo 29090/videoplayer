@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box; /* Это стиль ставит изменение способа рассчета высоты/ширины элемента и работает в ущерб внутр. пространства*/
+    
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: url('/main/image/image.jpg');
+    background-position: center; 
+    background-size: cover;
+    font-size: 1.5em;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.block-main-lk{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 20%;
+    grid-template-areas: "top top" "text start";
+    gap: 1em;
+    width: 80%;
+    height: 90vh;
+    padding: 1em;
+    border-radius: 0.4em;
+    background-color: #ffff;
+    font-family: Arial;
+}
+
+.block-main-lk > div{
+    padding: 1em;
+}
+
+.block-main-lk > .top{
+    grid-area: top;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 90%;
+    gap: 2em;
+}
+
+.block-main-lk > .text{
+    grid-area: text;
+    border-radius: 0.4em; /* радиус скругления углов */
+    border: 2px solid #000; /* толщина и цвет рамки */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); /* тени справа и снизу */
+}
+
+.block-main-lk > .start{
+    grid-area: start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90%;
+}
+
+.custom-button {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 0.4em; /* радиус скругления углов */
+    border: 2px solid #000; /* толщина и цвет рамки */
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); /* тени справа и снизу */
+    transition: transform 0.5s ease; /* добавляем плавный переход при изменении размера */
+  }
+
+  .custom-button:hover {
+    transform: scale(1.2); /* увеличиваем размер кнопки в 1.2 раза при наведении */
+  }
+
+  .custom-button > span{
+    padding: 0 1em;
+  }
+
+
+.block-enter-reg{
+    width: 30%;
+    min-height: 50%;
+    font-size: 1.5em;
+    padding: 1em;
+    border-radius: 0.4em;
+    background-color: #ffff;
+    font-family: Arial;
+    /* border: 1px solid #000000;    --- бардюр 1-размер рамки, 2-стиль рамки, 3-цвет рамки*/
+}
+
+.block-enter-reg select, .block-enter-reg input{
+    width: 100%; /* Учитываем padding в общей ширине */
+    margin: 0 0 0.5em 0; /* Добавляем отступ снизу для <select> */
+    padding: 0.2em 0 0.2em 0.2em;
+    border-radius: 0.4em;
+    border: 0;
+    background-color: rgb(222, 219, 219);
+    font-size: 0.8em;
+}
+
+.block-enter-reg h1{
+    margin: 0 0 1em 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.block-enter-reg input[type="submit"]{
+    background-color: blue;
+    color: white;
+    padding: 0.2em 0 0.2em 0;
+}
+
+#b_recovery, #b_enter{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.5em;
+    margin: 0.5em 0 0 0;
+    color: blue;
+}
+
+#b_recovery:hover, #b_enter:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+    grid-template-rows: 50vh 50vh;
+    gap: 0.5em;
+}
+
+
+.item{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.item2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+#form_recovery_password{
+    display: none;
+}
+
+
+@media (max-width: 500px) {
+.block-enter-reg{
+    width: 80%;
+    min-height: 60%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+.block-enter-reg{
+    width: 30%;
+    min-height: 55%;
+    }
+}
+
+.video{
+    width: 100%;
+}
